@@ -57,22 +57,6 @@ a {
 #content {
   background: #EEE2CA;
   grid-area: content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 5vw;
-}
-
-#experiment-links h2 {
-  padding: 0;
-  margin: 5px;
-  border-bottom: 5px solid #251F20;
-}
-
-ul {
-  margin: 0;
-  padding: 5px;
-  list-style-type: none;
 }
 
 #white-sm {
@@ -107,6 +91,10 @@ p {
   margin: 0;
 }
 
+img {
+  max-width: 100%;
+}
+
 @media (min-width: 800px) {
   #canvas {
     grid-template-columns: 3.5fr 20px minmax(250px, 1fr);
@@ -119,6 +107,16 @@ p {
   }
   #content {
     display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 2fr 1fr 3fr 1fr;
+  }
+  .experiment {
+    text-align: center;
+    border: 10px solid #251F20;
+  }
+
+  .experiment#colourful {
+    grid-column: 1 / 3;
   }
 }
 

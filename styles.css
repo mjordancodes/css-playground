@@ -1,0 +1,129 @@
+body { margin: 0; }
+#canvas {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  background: #251F20;
+  grid-template-rows: 
+    minmax(auto, 2fr) 
+    minmax(5px, 30px) 
+    minmax(50px, 1fr) 
+    minmax(5px, 10px) 
+    minmax(auto, 50vh) 
+    minmax(5px, 10px) 
+    minmax(50px, 1fr) 
+    minmax(30px, auto) 
+    minmax(200px, 1fr);
+  grid-template-areas: 'blue'
+                       '.'
+                       'yellow'
+                       '.'
+                       'content'
+                       '.'
+                       'red'
+                       'author'
+                       'whitesm';
+}
+
+.text {
+  color: #EEE2CA;
+  font-family: 'Futura';
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  line-height: 30px;
+}
+
+a {
+  color: #F05732;
+  text-decoration: none;
+}
+
+#red {
+  background: #F05732;
+  grid-area: red;
+}
+
+#yellow {
+  background: #FAA11C;
+  grid-area: yellow;
+}
+
+#blue {
+  background: #518FAF;
+  grid-area: blue;
+}
+
+#content {
+  background: #EEE2CA;
+  grid-area: content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 5vw;
+}
+
+#experiment-links h2 {
+  padding: 0;
+  margin: 5px;
+  border-bottom: 5px solid #251F20;
+}
+
+ul {
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+}
+
+#white-sm {
+  background: #EEE2CA;
+  grid-area: whitesm;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  text-align: justify;
+}
+
+#title {
+  grid-area: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title h1 {
+  font-size: 25px;
+  margin: 0;
+  font-weight: normal;
+}
+
+#author {
+  grid-area: author;
+}
+
+p {
+  margin: 0;
+}
+
+@media (min-width: 800px) {
+  #canvas {
+    grid-template-columns: 3.5fr 20px minmax(250px, 1fr);
+    grid-template-rows: 1fr 30px 2fr 30px minmax(50px, 1fr);
+    grid-template-areas: 'blue . red'
+                        'title title .'
+                        'content . yellow'
+                        'content author author'
+                        'content . whitesm';
+  }
+  #content {
+    display: grid;
+  }
+}
+
+@media (min-width: 1000px) {
+  #title {
+    grid-area: title;
+  }
+}

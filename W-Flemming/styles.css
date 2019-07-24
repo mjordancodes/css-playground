@@ -1,0 +1,30 @@
+body {
+  margin: 0;
+  background: #f8f9dc;
+}
+
+#canvas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 95vh;
+}
+
+svg {
+  width: 100vmin;
+  height: 100vmin;
+}
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: #F05732;
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}

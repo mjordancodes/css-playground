@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  background: #D9DFD1;
+  font-family: 'roboto';
+}
+
+#canvas {
+  display: grid;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 25px;
+  margin-top: -25px;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: 'yo yo .'
+                       'guests guests la'
+                       'ten ten ten'
+                       'info info go';
+}
+
+#yo {
+  grid-area: yo;
+}
+
+#la {
+  grid-area: la;
+}
+
+#ten {
+  grid-area: ten;
+}
+
+#go {
+  grid-area: go;
+  margin-top: -9vh;
+}
+
+#guests {
+  grid-area: guests;
+}
+
+#info {
+  grid-area: info;
+}
+
+.title {
+  font-size: 35vh;
+  line-height: 30vh;
+  color: rgba(0, 111, 164, 0.75);
+  text-shadow: -15px 0px rgba(242, 113, 32, 0.75);
+  letter-spacing: -1.5vw;
+  margin-top: -4vh;
+  font-weight: bold;
+}
+
+#guests, #info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+p {
+  margin: 0;
+}
